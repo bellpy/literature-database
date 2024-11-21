@@ -2,10 +2,10 @@ import sqlite3 as lite
 from pubsub import pub as pb
 
 import wx
-import gui
+import src.gui as gui
 import datetime
 
-from database_model import DatabaseModel
+from database.database_model import DatabaseModel
 from fpdf import FPDF
 
 
@@ -35,7 +35,7 @@ class MainFrame(gui.MainFrame):
         self.LogFrame = LogFrame(self)
 
         # Fixed value
-        self.con = lite.connect('literature.db')
+        self.con = lite.connect('./database/literature.db')
         self.cur = self.con.cursor()
         self.dataModel = DatabaseModel(pb)
     
@@ -77,7 +77,7 @@ class MainFrame(gui.MainFrame):
     def btn_export_txt(self, event):
         # Fixed value
         all_books = self.dataModel.getBooks(self.con)
-        with open("books.txt", "w+", encoding='utf-8') as txt_file:
+        with open("./output/books.txt", "w+", encoding='utf-8') as txt_file:
             for book in all_books:
                 txt_file.write(", ".join(map(str, book)) + '\n')
 
@@ -90,7 +90,7 @@ class MainFrame(gui.MainFrame):
         for book in all_books:
             line = ", ".join(map(str, book))
             pdf.cell(200, 10, txt = line, ln = 1, align = 'L')
-        pdf.output("books.pdf")
+        pdf.output("./output/books.pdf")
 
     def btn_add_book(self, event):
         dlg = gui.AddBookDialog(self)
