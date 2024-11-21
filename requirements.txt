@@ -1,0 +1,4 @@
+wxPython==4.2.0
+SQLAlchemy==2.0.36
+fpdf==1.7.2
+pubsub==0.1.2
