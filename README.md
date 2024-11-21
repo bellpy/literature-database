@@ -24,17 +24,17 @@
 </div>
 
 ## Preview
-<img src="https://github.com/user-attachments/assets/f87734a9-6e78-47f0-8a22-d6eefc8809a3" alt="image" width="250">
-<img src="https://github.com/user-attachments/assets/70a2e14b-7832-45a7-9dfb-f08f21b99ceb" alt="image" width="250">
-<img src="https://github.com/user-attachments/assets/abb32b08-0686-4ded-890b-e1349e6afa7f" alt="image" width="250">
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/f87734a9-6e78-47f0-8a22-d6eefc8809a3" alt="image" width="250">
+  <img src="https://github.com/user-attachments/assets/70a2e14b-7832-45a7-9dfb-f08f21b99ceb" alt="image" width="250">
+  <img src="https://github.com/user-attachments/assets/abb32b08-0686-4ded-890b-e1349e6afa7f" alt="image" width="250">
+</div>
 
-## Getting Started
-
-### Installation
+### Getting started
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/bellpy/literature-database
+   git clone https://github.com/bellpy/literature-database.git
    ```
 2. Install python library dependecies
    ```sh
